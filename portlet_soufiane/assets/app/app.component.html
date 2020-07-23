@@ -1,0 +1,51 @@
+<div class="card" >
+	<div class="card-header"><span style="font-weight:Bold">Saisie d'une Tache </span>  </div>
+	<div class="card-body">
+<form  >
+	 <div class="form-group">
+	   <label for="uname">Nom de la Tache:</label>
+	   <input type="text" class="form-control" name="nom"  [(ngModel)]="tache.nom" required>
+	  
+	 </div>
+	 <div class="form-group">
+	   <label for="uname">Description:</label>
+	   <input type="text" class="form-control"  name="description"  [(ngModel)]="tache.description"   required>
+	   
+	 </div>
+	 <button type="submit"  (click)="saveTache()" class="btn btn-primary">Valider</button>
+   </form> 
+</div>
+   </div>
+
+<div class="card" >
+	<div class="card-header"><span style="font-weight:Bold">Listes des Taches   </span>  </div>
+	<div class="card-body">
+	<table class="table table-striped">
+	<thead>
+	<tr>
+	<th>ID</th><th>Nom_Tache</th><th>Description</th><th></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr *ngFor="let t of taches; let i = index">
+	<td>{{t.id}}</td>
+	<td>{{t.nom}}</td>
+	<td>{{t.description}}</td>
+	<td><button type="submit"  (click)="delete(t.id)" class="btn btn-primary">Supprimer</button></td>
+	
+	</tr>
+	</tbody>
+	</table>
+</div>
+</div>
+
+
+
+
+   
+   
+
+
+  
+
+

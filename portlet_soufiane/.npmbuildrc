@@ -1,0 +1,16 @@
+{
+	"liferayDir": "C:\\Users\\SOUFIANE\\Desktop\\liferay\\liferay-ce-portal-7.3.3-ga4",
+	"webpack": {
+		"rules": [
+			{
+				"test": "src\\\\.*\\.ts$",
+				"use": "ts-loader"
+			}
+		],
+		"extensions": [
+			".ts",
+			".js"
+		],
+		"mainModule": "index.ts"
+	}
+}
